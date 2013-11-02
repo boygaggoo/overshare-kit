@@ -1,5 +1,3 @@
-# Based on podspec from https://github.com/jhersh/overshare-kit
-
 Pod::Spec.new do |s|
   s.name         = "OvershareKit"
   s.version      = "0.0.1"
@@ -13,7 +11,7 @@ Pod::Spec.new do |s|
   s.frameworks   = 'UIKit'
   
   s.source_files = 'Overshare Kit/*.{h,m}'
-  s.resources    = ['Overshare Kit/Images/*'], 'Overshare Kit/*.xib'
+  s.resources    = 'Overshare Kit/Images/*', 'Overshare Kit/*.xib'
   
   s.ios.deployment_target = '7.0'
   
@@ -25,3 +23,5 @@ Pod::Spec.new do |s|
   	ss.dependency 'PocketAPI'
   end
 end
+
+# Based on podspec from https://github.com/jhersh/overshare-kit

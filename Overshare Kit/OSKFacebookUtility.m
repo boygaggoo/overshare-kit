@@ -45,8 +45,10 @@
     SLRequestHandler requestHandler = ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
         if (responseData != nil) {
             
+#if DEBUG == 1
             NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
             OSKLog(@"%@", response);
+#endif
             
             NSInteger statusCode = urlResponse.statusCode;
             if ((statusCode >= 200) && (statusCode < 300)) {
